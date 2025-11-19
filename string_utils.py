@@ -1,6 +1,6 @@
 def split_before_each_uppercases(formula):
     if formula == "":
-        return []   # המקרה שחסר לך בטסטים
+        return []
     
     parts = []
     current = formula[0]
