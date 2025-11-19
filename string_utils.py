@@ -7,8 +7,10 @@ def split_before_each_uppercases(formula):
       current = char
     else:
       current += char
-    parts.append(current)
-    print parts
+      
+  parts.append(current)
+  print(parts)
+  return parts
 
 
 
