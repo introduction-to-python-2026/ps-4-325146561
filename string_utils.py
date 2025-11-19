@@ -1,4 +1,6 @@
 def split_before_each_uppercases(formula):
+    if not formula:
+        return []
     parts = []
     current = formula[0]
     
