@@ -2,16 +2,16 @@ def split_before_each_uppercases(formula):
     if not formula:
         return []
     parts = []
-    current = formula[0]
+    start = formula[0]
     
-    for char in formula[1:]:
-        if char.isupper():
+    for end in range(1,len(formula)):
+        if end.isupper():
             parts.append(current)
-            current = char
+            start = end
         else:
-            current += char
+            start += end
 
-    parts.append(current)
+    parts.append(start)
     return parts
 
 
