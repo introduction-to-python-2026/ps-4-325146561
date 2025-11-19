@@ -1,27 +1,25 @@
 def split_before_each_uppercases(formula):
-    if not formula:
-        return []
     parts = []
-    start = [0]
-    
-    for end in range(1,len(formula)):
-        if formula[end].isupper():
-            parts.append(formula[start:end])
-            start = end
-        else:
-            start += end
+    current = formula[0]
 
-    parts.append(formula[start:])
+    for char in formula[1:]:
+        if char.isupper():
+            parts.append(current)
+            current = char
+        else:
+            current += char
+
+    parts.append(current)
     return parts
 
 
 def split_at_first_digit(formula):
     digit_location = 1
-    
+
     for char in formula[1:]:
         if char.isdigit():
             break
-            digit_location += 1
+        digit_location += 1
 
     if digit_location == len(formula):
         return formula, 1
