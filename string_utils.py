@@ -6,12 +6,12 @@ def split_before_each_uppercases(formula):
     
     for end in range(1,len(formula)):
         if formula[end].isupper():
-            parts.append(start)
+            parts.append(formula[start:end])
             start = end
         else:
             start += end
 
-    parts.append(start)
+    parts.append(formula[start:])
     return parts
 
 
