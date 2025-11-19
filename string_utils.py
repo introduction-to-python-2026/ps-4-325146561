@@ -2,7 +2,7 @@ def split_before_each_uppercases(formula):
     if not formula:
         return []
     parts = []
-    start = formula[0]
+    start = [0]
     
     for end in range(1,len(formula)):
         if end.isupper():
