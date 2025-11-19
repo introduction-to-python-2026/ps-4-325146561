@@ -1,4 +1,14 @@
 def split_before_each_uppercases(formula):
+  parts = [] 
+  current = formula[0]
+  for char in formula[1:]:
+    if char.isupper():
+      parts.append(current)
+      current = char
+    else:
+      current += char
+    parts.append(current)
+    print parts
 
 
 
